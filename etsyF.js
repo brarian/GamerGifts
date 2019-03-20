@@ -1,6 +1,7 @@
 $(document).ready(function() {
   $("form").submit(function(e) {
     e.preventDefault();
+    getTdMovie()
     getEtsyResults();
     
   });
@@ -10,7 +11,7 @@ function getEtsyResults() {
   console.log("etsy ran");
   let term = $("input").val();
   etsyURL = `https://openapi.etsy.com/v2/listings/active.js?keywords=${term}&limit=12&includes=Images:1&api_key=${
-    esty.KEYSTRING
+    etsy.KEYSTRING
   }`;
 
   console.log(etsyURL);
@@ -32,7 +33,6 @@ function getEtsyResults() {
 function showEtsyResults(data) {
   $(".etsy_search_results").empty();
   data.results.map((result, i) => {
-    console.log(data.results);
     let image = result.Images[0].url_170x135; 
     let title =result.title;
     let url = result.url;
