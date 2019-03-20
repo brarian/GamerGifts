@@ -15,6 +15,5 @@ function getTdMovie() {
       "info": 1 
     }
   })
-  console.log(Similar)
 }
 
