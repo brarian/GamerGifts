@@ -11,12 +11,12 @@ function getTdBooks(userInput) {
      'type': 'books',
      'info': 1
    }, 
-   success: showTdMovieResults, 
+   success: showTdBooksResults, 
    error: showError
  });
 }
 
 
 function showTdBooksResults(data){
- console.log(data.Similar.Results)
+ console.log("books", data.Similar.Results)
 }

@@ -2,8 +2,12 @@ $(document).ready(function() {
   $("form").submit(function(e) {
     let userInput = $("input").val();
     e.preventDefault();
-    getEtsyResults(userInput);
+    getEtsy(userInput);
     getTdMovie(userInput);
+    getTdBooks(userInput);
+    getTdMusic(userInput);
+    getTdGames(userInput);
+
   });
 });
 

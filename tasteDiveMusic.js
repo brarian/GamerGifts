@@ -18,5 +18,5 @@ function getTdMusic(userInput) {
 
 
 function showTdMusicResults(data){
- console.log(data.Similar.Results)
+ console.log("music", data.Similar.Results)
 }

@@ -32,7 +32,7 @@ function showEtsyResults(data) {
         <div class="card-body"> 
           <h5 class="card-title">${title}</h5>
           <p class="card-text"> ${description}</p>
-            <a href="${url}" target="_blank" class="btn btn-primary"> See More </a>  
+            <a href="${url}" target="_blank" class="btn btn-primary"> See This On Etsy </a>  
         </div>
     </div>`
     );

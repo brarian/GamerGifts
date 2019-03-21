@@ -1,25 +1,24 @@
-function getTdMovie(userInput) { 
-   $.ajax({
-    url: 'https://tastedive.com/api/similar',
+function getTdGames(userInput) {
+  $.ajax({
+    url: "https://tastedive.com/api/similar",
     async: true,
-    jsonp: 'callback',
-    dataType: 'jsonp',
+    jsonp: "callback",
+    dataType: "jsonp",
     data: {
-      'q': userInput,
-      'k': td.ACCESSKEY,
-      'limit': 20,
-      'type': 'movies',
-      'info': 1
-    }, 
-    success: showTdMovieResults, 
+      q: userInput,
+      k: td.ACCESSKEY,
+      limit: 20,
+      type: "games",
+      info: 1
+    },
+    success: showTdGamesResults,
     error: showError
-
   });
 }
 
-
-function showTdMovieResults(data){
-  console.log("movies", data.Similar.Results)
+function showTdGamesResults(data) {
+  $(".games_search").empty();
+  console.log(data.Similar.Results);
   data.Similar.Results.map((result, i) => {
     let name = result.Name;
     let description = result.wTeaser.slice(0, 245);
